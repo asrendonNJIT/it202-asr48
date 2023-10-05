@@ -3,21 +3,14 @@ $a1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $a2 = [0, 1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
 $a3 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 $a4 = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
-function processArray($arr) {
 
-    $final=[];
-    $val = 0;
-    foreach($arr as $item ){
-        $val = $val + $item;
-        if($item%2!=0){
-            echo $item;
-            array_push($final,$item);
-        }
-        
-        
+function processArray($arr)
+{
+    foreach ($arr as $item) {
+        echo $item;
     }
-    
-    echo "<br>Processing Array:<br><pre>" . var_export($final, true) . "</pre>";
+    echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
+
     echo "<br>Odds output:<br>";
     //note: use the $arr variable to iterate over, don't directly touch $a1-$a4
     //TODO add logic here to echo out only odd values
